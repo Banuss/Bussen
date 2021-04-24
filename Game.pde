@@ -2,6 +2,10 @@ class Game
 {
   ArrayList<Player> players = new ArrayList<Player>();
 
+  Game()
+  {
+  }
+  
   void AddPlayer(Player player)
   {
     players.add(player);
@@ -24,8 +28,9 @@ class Player
     cards[round] = card;
   }
   
-  boolean HasCard (Card card)
+  boolean HasCard(Card card)
   {
+    return false;
   }
 }
 
