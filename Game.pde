@@ -1,9 +1,18 @@
 class Game
 {
-  ArrayList<Player> players = new ArrayList<Player>();
+  
+  int gameStage;
+  ArrayList<Player> players; 
 
   Game()
   {
+    players = new ArrayList<Player>();
+    gameStage = 0;
+  }
+  
+  void nextStage()
+  {
+    gameStage++;
   }
   
   void AddPlayer(Player player)
@@ -32,17 +41,4 @@ class Player
   {
     return false;
   }
-}
-
-
-class GatheringCards
-{
-  //Rood Zwart
-
-
-  //
-}
-
-class Piramid
-{
 }
