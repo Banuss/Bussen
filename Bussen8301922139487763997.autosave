@@ -1,0 +1,16 @@
+  PFont uiFont;
+
+void setup() {
+
+  background(0);
+  surface.setTitle("Bussen...");
+  uiFont = createFont("fonts/keed.ttf", 72);
+  
+  Game game = new Game();
+}
+
+
+void draw() { 
+  
+
+} 

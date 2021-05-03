@@ -1,6 +1,7 @@
 public static final String GAME_SETTINGS = "game.properties";
 
 int PACKS = 1;
+int SCREEN_NUM = 1;
 
 void loadSettings()
 {
@@ -18,6 +19,9 @@ void loadSettings()
         case "PACKS":
           PACKS = Integer.parseInt(setting.substring(separatorPos+1));
           break;
+         case "SCREEN_NUM":
+          SCREEN_NUM = Integer.parseInt(setting.substring(separatorPos+1));
+          break;  
         default:
           println("Unknown setting: \"" + setting + "\"");
           break;
@@ -26,7 +30,8 @@ void loadSettings()
     }
   }
   settings = new String[] {
-    "PACKS=" + PACKS
+    "PACKS=" + PACKS,
+    "SCREEN_NUM=" + SCREEN_NUM
   };
 
   for (String setting : settings)

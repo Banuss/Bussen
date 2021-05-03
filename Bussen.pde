@@ -1,9 +1,10 @@
 import java.util.HashSet;
 
 UI ui;
+PFont uiFont;
 HashSet<Hitbox> hitboxes = new HashSet<Hitbox>();
 HashSet<Render> changed = new HashSet<Render>();
-
+Game game;
 
 //Gamestages:
 //0 Setup players
@@ -15,8 +16,19 @@ HashSet<Render> changed = new HashSet<Render>();
 //6 Setup Lenght of "De Bus"
 //7 "De Bus"
 
+void settings() {
+  loadSettings();
+  fullScreen(P2D, SCREEN_NUM);
+}
+
 void setup() {
-  Game game = new Game();
+  game = new Game();
+  textAlign(CENTER, CENTER);
+  fill(255);
+  textFont(uiFont);
+  textSize(200);
+  text("Loading...", width/2, height/2);
+  noLoop();
 }
 
 

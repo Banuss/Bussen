@@ -10,7 +10,7 @@ class Game
     gameStage = 0;
   }
   
-  void nextStage()
+  void NextStage()
   {
     gameStage++;
   }
